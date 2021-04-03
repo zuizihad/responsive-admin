@@ -8,11 +8,13 @@
     <title>Dark theme admin dashboard</title>
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- side bar start -->
+    <input type="checkbox" name="" id="menu-toggle">
     <div class="sidebar">
         <div class="brand">
             <span class="lab la-affiliatetheme"></span>
@@ -87,7 +89,7 @@
     <!-- main content start -->
     <div class="main-content">
         <header>
-            <label for="" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggler">
                 <span class="las la-bars folow"></span>
             </label>
             <div class="search">
@@ -153,9 +155,32 @@
                     </div>
                 </div>
             </div>
+
+            <!-- chart start -->
+            <div class="chart-grid">
+                <div class="chart-follow">
+                    <div class="chart-head">
+                        <h3>Followers</h3>
+                        <span class="las la-cog"></span>
+                    </div>
+                    <div id="myfirstchart" style="height: 250px;"></div>
+                </div>
+                <div class="chart-sales">
+                    <div class="chart-head">
+                        <h3>Sales</h3>
+                        <span class="las la-ellipsis-h"></span>
+                    </div>
+                    <div id="donut-example" style="height: 250px;"></div>
+                </div>
+            </div>
         </main>
     </div>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script src="app.js"></script>
 
 </html>
